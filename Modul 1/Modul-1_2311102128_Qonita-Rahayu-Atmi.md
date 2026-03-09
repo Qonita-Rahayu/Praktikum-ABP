@@ -36,7 +36,7 @@
 
 **Git** merupakan sebuah sistem pengontrol versi (Version Control System) yang dirancang oleh Linus Torvalds untuk mengelola riwayat perubahan pada proyek perangkat lunak secara efisien. Secara mendasar, Git berperan sebagai "mesin waktu" yang mencatat setiap detail modifikasi pada file proyek, baik saat dikerjakan secara individu maupun dalam kolaborasi tim besar. Keunggulan utamanya terletak pada sifatnya yang terdistribusi (distributed revision control), yang berarti basis data riwayat proyek tidak hanya tersimpan di satu server pusat, melainkan terduplikasi secara lengkap di setiap perangkat pengembang yang terlibat. Hal ini memungkinkan setiap anggota tim untuk bekerja secara mandiri tanpa ketergantungan penuh pada koneksi server, sekaligus memberikan keamanan data yang lebih tinggi karena setiap salinan lokal berfungsi sebagai cadangan utuh dari seluruh riwayat proyek.
 
-**CLI**Command  line  interface  (CLI)  adalah  antarmuka  pengguna  (UI) berbasis  teks  yang digunakan  untuk  berinteraksi  dengan  komputer untuk berinteraksi dengan sistem operasi atau perangkat lunak melalui pengetikan perintah secara manual.
+**CLI** Command line interface adalah antarmuka pengguna (UI) berbasis teks yang digunakan untuk berinteraksi  dengan komputer untuk berinteraksi dengan sistem operasi atau perangkat lunak melalui pengetikan perintah secara manual.
 
 ---
 
