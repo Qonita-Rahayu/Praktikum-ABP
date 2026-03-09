@@ -36,6 +36,8 @@
 
 **Git** merupakan sebuah sistem pengontrol versi (Version Control System) yang dirancang oleh Linus Torvalds untuk mengelola riwayat perubahan pada proyek perangkat lunak secara efisien. Secara mendasar, Git berperan sebagai "mesin waktu" yang mencatat setiap detail modifikasi pada file proyek, baik saat dikerjakan secara individu maupun dalam kolaborasi tim besar. Keunggulan utamanya terletak pada sifatnya yang terdistribusi (distributed revision control), yang berarti basis data riwayat proyek tidak hanya tersimpan di satu server pusat, melainkan terduplikasi secara lengkap di setiap perangkat pengembang yang terlibat. Hal ini memungkinkan setiap anggota tim untuk bekerja secara mandiri tanpa ketergantungan penuh pada koneksi server, sekaligus memberikan keamanan data yang lebih tinggi karena setiap salinan lokal berfungsi sebagai cadangan utuh dari seluruh riwayat proyek.
 
+**CLI**Command  line  interface  (CLI)  adalah  antarmuka  pengguna  (UI) berbasis  teks  yang digunakan  untuk  berinteraksi  dengan  komputer untuk berinteraksi dengan sistem operasi atau perangkat lunak melalui pengetikan perintah secara manual.
+
 ---
 
 # Unguided
@@ -76,3 +78,4 @@ Langkah Keenam : Repositori Baru Berhasil
 
 ## C. Referensi
 - [Materi Modul 1](https://drive.google.com/file/d/1sAJR4AconN_aZjvLF-GTY0DM-e84pL63/view?usp=sharing)
+- [R. Rosnelly and S. W. Yudha, "Perancangan Aplikasi Otomatisasi Deteksi XSS Berbasis CLI dengan Bahasa Pemrograman Go," UNES Journal of Information System, vol. 8, no. 2, pp 12., Dec. 2023.](https://fe.ekasakti.org/index.php/UJIS/article/view/37/29)
