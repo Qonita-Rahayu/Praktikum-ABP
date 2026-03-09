@@ -75,4 +75,4 @@ Langkah Keenam : Repositori Baru Berhasil
 - Berdasarkan hasil praktikum yang telah dilakukan, berhasil mendemonstrasikan alur kerja dasar (workflow) Git, mulai dari pembuatan repositori daring di GitHub, penyiapan direktori lokal, hingga proses sinkronisasi menggunakan perintah terminal. Melalui langkah langkah perintah seperti git init, git add, git commit, dan git push, setalah itu repositori baru berhasil dibuat. 
 
 ## C. Referensi
-- [Materi Modul 1](https://drive.google.com/drive/folders/1ug7dmm-aVF-NG9-YT5kT519HdGmkXaD-)
+- [Materi Modul 1](https://drive.google.com/file/d/1sAJR4AconN_aZjvLF-GTY0DM-e84pL63/view?usp=sharing)
