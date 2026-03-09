@@ -50,7 +50,7 @@ Langkah Pertama : Pembuatan Repositori
 ### Langkah 2: Menghubungkan Proyek ke Repositori
 ![Langkah 2](assets/02.png)
 Langkah Kedua : Menghubungkan ke Repositori
-- Langkah kedua adalah melakukan inisialisasi Git pada folder proyek dan menghubungkannya ke repositori GitHub yang baru saja dibuat. Melalui instruksi yang muncul di layar, dapat menjalankan perintah seperti **git init** untuk memulai repositori baru, serta **git remote** add **origin** untuk menyambungkan folder lokal ke alamat URL repositori. 
+- Langkah kedua adalah melakukan inisialisasi Git pada folder proyek dan menghubungkannya ke repositori GitHub yang baru saja dibuat. Melalui instruksi yang muncul di layar, dapat menjalankan perintah seperti (`git init`) untuk memulai repositori baru, serta (`git remote`) add (`origin`) untuk menyambungkan folder lokal ke alamat URL repositori. 
 
 ### Langkah 3: Membuat File di Direktori Lokal
 ![Langkah 3](assets/03.png)
