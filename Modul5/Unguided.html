@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marhaban Ya Ramadan 1447 H - Qonita Rahayu Atmi</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container text-center px-4" style="max-width: 700px; z-index: 1;">
+        
+        <div class="d-flex justify-content-center align-items-center gap-4 mb-4">
+            <i class="bi bi-star-fill text-warning fs-3 floating-star star-1"></i>
+            <i class="bi bi-moon-stars-fill display-2 text-warning floating-star star-2"></i>
+            <i class="bi bi-star-fill text-warning fs-3 floating-star star-3"></i>
+        </div>
+
+        <div class="mb-4">
+            <span class="badge badge-tahun px-4 py-2 rounded-pill fw-medium fs-6 shadow-sm">
+                <i class="bi bi-calendar3 me-2"></i> Ramadan 1447 H
+            </span>
+        </div>
+        
+        <h1 class="fw-bold mb-3 display-4">Marhaban ya Ramadan</h1>
+        
+        <p class="fs-5 mb-5 fw-light text-light-custom">
+            Selamat menunaikan ibadah puasa. Semoga bulan suci ini membawa keberkahan, rahmat, dan ampunan bagi kita semua.
+        </p>
+        
+        <div class="glass-panel p-4 text-start mb-5 position-relative">
+            <i class="bi bi-quote position-absolute top-0 start-0 ms-2 mt-2 quote-icon"></i>
+            <p class="fst-italic fs-6 mb-0 lh-lg ms-4 text-quote">
+                "Barangsiapa berpuasa Ramadan atas dasar iman dan mengharap pahala dari Allah, maka dosanya yang telah lalu akan diampuni."
+            </p>
+            <small class="d-block mt-2 text-end text-warning opacity-75">- HR. Bukhari & Muslim</small>
+        </div>
+
+        <p class="text-white-50 small mb-1">2311102128_Qonita Rahayu Atmi</p>
+
+        <p class="fw-semibold text-uppercase tracking-widest text-warning mb-4 title-maaf">
+            Mohon Maaf Lahir & Batin
+        </p>
+
+        <button onclick="bukaTHR()" class="btn btn-thr mt-2">
+            <i class="bi bi-gift-fill me-2"></i> Ambil THR Kamu
+        </button>
+
+    </div>
+
+    <div class="modal-overlay" id="thrModal" onclick="tutupTHR(event)">
+        <div class="thr-card" onclick="event.stopPropagation()">
+            <div class="amplop-icon">
+                <i class="bi bi-envelope-paper-heart-fill"></i>
+            </div>
+            <h2 class="text-warning fw-bold mb-3 modal-title-custom">Selamat!</h2>
+            <p class="mb-3 fs-5 text-light">
+                Kamu dapat THR Online senilai:<br>
+                <span class="fs-3 fw-bold text-warning d-block mt-2">Rp 100.000.000,-</span>
+            </p>
+            <p class="text-white-50 small mb-4 fst-italic">
+                *(Tapi bohong ya, THR-nya berupa doa aja, semoga rezeki kamu lancar dan puasanya full terus!) 🙏✨
+            </p>
+
+            <p class="text-white-50 small mb-3">2311102128_Qonita Rahayu Atmi</p>
+
+            <button onclick="tutupTHR(event)" class="btn btn-outline-warning rounded-pill px-4">
+                Aamiin, Makasih!
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
