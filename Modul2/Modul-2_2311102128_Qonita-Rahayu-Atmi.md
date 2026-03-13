@@ -51,14 +51,13 @@ Seperti yang sudah dijelaskan sebelumnya struktur dasar HTML antara lain berupa:
 
 **4. Hyperlink** adalah elemen krusial dalam HTML yang berfungsi untuk menghubungkan satu dokumen dengan dokumen lainnya, baik dalam situs yang sama maupun ke situs eksternal. Di balik layar, hyperlink didefinisikan menggunakan tag jangkar atau anchor tag (<a>).
 
-**5. Tabel** adalah salah satu elemen penting digunakan untuk menampilkan data yang membutuhkan bentuk tabel. Tabel pada HTML didefinisikan dengan tag <table></table> dengan setiap pendefinisian baris menggunakan tag <tr></tr>, pendefinisian heading tabel menggunakan tag <th></th> dan pendefinisian kolom menggunakan tag <td></td>.
+**5. Tabel** adalah salah satu elemen penting digunakan untuk menampilkan data yang membutuhkan bentuk tabel. Tabel pada HTML didefinisikan dengan tag `<table></table>` dengan setiap pendefinisian baris menggunakan tag `<tr></tr>`, pendefinisian heading tabel menggunakan tag `<th></th>` dan pendefinisian kolom menggunakan tag `<td></td>`.
 
-**6. Image** untuk menampilkan sebuah gambar pada halaman web merupakan sebuah improvisasi dalam pembuatan desain sebuah
-web yang dapat memperindah tampilan website. 
+**6. Image** untuk menampilkan sebuah gambar pada halaman web merupakan sebuah improvisasi dalam pembuatan desain sebuah web yang dapat memperindah tampilan website. 
 
-**7. Audio / Video Elemen** untuk menyisipkan audio atau video, diperlukan sebuah plugin seperti Flash Player namun sekarang dengan HTML5 memiliki tag yang dapat menyisipkan audio atau video ke dalam laman web. Untuk audio menggunakan tag <audio> untuk tag pembuka dan <source> untuk memanggil url atau alamat direktori file. Sedangkan untuk video menggunakan tag <video>.
+**7. Audio / Video Elemen** untuk menyisipkan audio atau video, diperlukan sebuah plugin seperti Flash Player namun sekarang dengan HTML5 memiliki tag yang dapat menyisipkan audio atau video ke dalam laman web. Untuk audio menggunakan tag `<audio>` untuk tag pembuka dan `<source>` untuk memanggil url atau alamat direktori file. Sedangkan untuk video menggunakan tag `<video>`.
 
-**8. Form** sebagai wadah untuk menampung dan mengumpulkan data-data dari pengguna jika diperlukan untuk disimpan dalam sebuah database. Tag dasar untuk pemanggilan form adalah <form> ... </form> dan diantara tag form tersebut merupakan tempat mendefinisikan elemen-elemen yang dibutuhkan form yang akan dibuat nantinya. 
+**8. Form** sebagai wadah untuk menampung dan mengumpulkan data-data dari pengguna jika diperlukan untuk disimpan dalam sebuah database. Tag dasar untuk pemanggilan form adalah `<form></form>` dan diantara tag form tersebut merupakan tempat mendefinisikan elemen-elemen yang dibutuhkan form yang akan dibuat nantinya. 
 
 ---
 
@@ -126,22 +125,22 @@ web yang dapat memperindah tampilan website.
 ![ss Unguided](assets/01.png)
 
 - **Penjelasan:**
-  - Pada baris 1, deklarasi <!DOCTYPE html> digunakan untuk memberi tahu web browser bahwa dokumen ini menggunakan standar HTML5.
-  - Pada baris 2, tag <html> digunakan sebagai elemen root atau akar yang membungkus seluruh konten dokumen HTML dari awal hingga akhir (ditutup pada baris 43).
-  - Pada baris 3-5, elemen <head> digunakan untuk menyimpan informasi metadata halaman. Di dalamnya terdapat tag <title> pada baris 4 yang berfungsi memberikan judul "Tabel Tanpa CSS" pada tab web browser.
-  - Pada baris 6, tag <body> digunakan untuk membungkus semua konten visual yang akan ditampilkan di dalam halaman web, seperti teks, tabel, dan elemen penataan letak lainnya.
-  - Pada baris 8, tag <center> digunakan untuk menjajarkan seluruh elemen di dalamnya (judul dan tabel) persis ke tengah halaman web tanpa menggunakan CSS.
-  - Pada baris 10, tag <h1> digunakan untuk menampilkan teks heading utama atau judul tabel, yaitu "Data Mahasiswa".
-  - Pada baris 12, tag <table> digunakan untuk membuat kerangka tabel, dengan atribut border="1" untuk menampilkan garis batas, cellpadding="10" untuk memberi jarak spasi dalam sel, dan cellspacing="0" untuk merapatkan jarak antar sel sehingga garis tabel tidak terlihat ganda.
-  - Pada baris 13-20, elemen <thead> digunakan untuk merangkum elemen baris judul dari setiap kolom tabel.
-  - Pada baris 14 (serta baris 22, 29, dan 35), tag <tr> (Table Row) digunakan untuk mendefinisikan atau membuat sebuah baris baru secara horizontal di dalam tabel.
-  - Pada baris 15-19, tag <th> (Table Header) digunakan untuk mendefinisikan sel yang berisi judul kolom (No, NIM, Nama, Jurusan, dan Angkatan). Teks di dalam tag ini secara otomatis akan ditebalkan (bold) dan diletakkan di tengah (center) oleh browser.
-  - Pada baris 21-40, elemen <tbody> digunakan untuk merangkum daftar seluruh baris data mahasiswa ke dalam baris berurutan standar.
-  - Pada baris 23, 24, dan 27 (serta sel serupa pada data mahasiswa lainnya), tag data <td> (Table Data) diberikan parameter atribut align="center" untuk memaksa peletakan posisi teks merata persis di bagian tengah kotak sel tabel tersebut (diterapkan pada No, NIM, dan Angkatan).
-  - Pada baris 25 dan 26 (serta sel serupa pada data mahasiswa lainnya), tag <td> digunakan tanpa atribut tambahan. Secara default, teks di dalamnya akan diratakan ke kiri atau left-aligned (diterapkan pada Nama dan Jurusan).
+  - Pada baris 1, deklarasi `<!DOCTYPE html>` digunakan untuk memberi tahu web browser bahwa dokumen ini menggunakan standar HTML5.
+  - Pada baris 2, tag `<html>` digunakan sebagai elemen root atau akar yang membungkus seluruh konten dokumen HTML dari awal hingga akhir (ditutup pada baris 43).
+  - Pada baris 3-5, elemen `<head>` digunakan untuk menyimpan informasi metadata halaman. Di dalamnya terdapat tag `<title>` pada baris 4 yang berfungsi memberikan judul "Tabel Tanpa CSS" pada tab web browser.
+  - Pada baris 6, tag `<body>` digunakan untuk membungkus semua konten visual yang akan ditampilkan di dalam halaman web, seperti teks, tabel, dan elemen penataan letak lainnya.
+  - Pada baris 8, tag `<center>` digunakan untuk menjajarkan seluruh elemen di dalamnya (judul dan tabel) persis ke tengah halaman web tanpa menggunakan CSS.
+  - Pada baris 10, tag `<h1>` digunakan untuk menampilkan teks heading utama atau judul tabel, yaitu "Data Mahasiswa".
+  - Pada baris 12, tag `<table>` digunakan untuk membuat kerangka tabel, dengan atribut border="1" untuk menampilkan garis batas, cellpadding="10" untuk memberi jarak spasi dalam sel, dan cellspacing="0" untuk merapatkan jarak antar sel sehingga garis tabel tidak terlihat ganda.
+  - Pada baris 13-20, elemen `<thead>` digunakan untuk merangkum elemen baris judul dari setiap kolom tabel.
+  - Pada baris 14 (serta baris 22, 29, dan 35), tag `<tr>` (Table Row) digunakan untuk mendefinisikan atau membuat sebuah baris baru secara horizontal di dalam tabel.
+  - Pada baris 15-19, tag `<th>` (Table Header) digunakan untuk mendefinisikan sel yang berisi judul kolom (No, NIM, Nama, Jurusan, dan Angkatan). Teks di dalam tag ini secara otomatis akan ditebalkan (bold) dan diletakkan di tengah (center) oleh browser.
+  - Pada baris 21-40, elemen `<tbody>` digunakan untuk merangkum daftar seluruh baris data mahasiswa ke dalam baris berurutan standar.
+  - Pada baris 23, 24, dan 27 (serta sel serupa pada data mahasiswa lainnya), tag data `<td>` (Table Data) diberikan parameter atribut align="center" untuk memaksa peletakan posisi teks merata persis di bagian tengah kotak sel tabel tersebut (diterapkan pada No, NIM, dan Angkatan).
+  - Pada baris 25 dan 26 (serta sel serupa pada data mahasiswa lainnya), tag `<td>` digunakan tanpa atribut tambahan. Secara default, teks di dalamnya akan diratakan ke kiri atau left-aligned (diterapkan pada Nama dan Jurusan).
 
 ## B. Kesimpulan
-- Berdasarkan hasil praktikum yang telah dilakukan pada modul 2, dapat membuat <table> untuk penyajian data, penggunaan tag <center> untuk penempatan elemen di tengah layar, serta atribut pendukung seperti border dan align="center", sebuah tabel data mahasiswa yang rapi dan terstruktur berhasil dibuat sesuai dengan ketentuan modul.
+- Berdasarkan hasil praktikum yang telah dilakukan pada modul 2, dapat membuat `<table>` untuk penyajian data, penggunaan tag `<center>` untuk penempatan elemen di tengah layar, serta atribut pendukung seperti border dan align="center", sebuah tabel data mahasiswa yang rapi dan terstruktur berhasil dibuat sesuai dengan ketentuan modul.
 
 ## C. Referensi
 - [Materi Modul 2](https://drive.google.com/file/d/1Gcsi-U4rzqU0GC6dYTlzO7KUthrGoL8q/view?usp=sharing)
