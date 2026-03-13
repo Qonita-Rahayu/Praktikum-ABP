@@ -313,7 +313,7 @@ function tutupTHR(e) {
 
   - Pada baris 12, tag `<link>` menghubungkan file style.css lokal yang berisi pengaturan gaya khusus, termasuk animasi dan efek glassmorphism.
 
-  - Pada baris 17-21, elemen `<div>` dengan kelas d-flex digunakan sebagai pembungkus ikon dekoratif. Di dalamnya terdapat tag <i> yang menampilkan ikon bintang dan bulan dengan kelas animasi floating-star.
+  - Pada baris 17-21, elemen `<div>` dengan kelas d-flex digunakan sebagai pembungkus ikon dekoratif. Di dalamnya terdapat tag `<i>` yang menampilkan ikon bintang dan bulan dengan kelas animasi floating-star.
 
   - Pada baris 33-39, elemen `<div>` dengan kelas glass-panel berfungsi sebagai wadah untuk menampilkan kutipan hadits dengan gaya visual panel transparan yang elegan.
 
