@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #a70000, #4a0000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    color: #FFD700;
+    text-align: center;
+}
+
+.greeting-container {
+    z-index: 10;
+    padding: 20px;
+}
+
+.gong-xi {
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #fff;
+    font-weight: 300;
+    text-shadow: 0 0 5px #ffaa00;
+}
+
+.chinese-char {
+    font-size: 5rem;
+    margin-bottom: -10px;
+    display: block;
+    color: #FFD700;
+    opacity: 0.8;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00;
+}
+
+.lantern-container {
+    position: absolute;
+    top: -20px;
+    transform-origin: top center;
+}
+
+.lantern-container.left {
+    left: 15%;
+}
+
+.lantern-container.right {
+    right: 15%;
+}
+
+.lantern {
+    width: 90px;
+    height: 110px;
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #b30000);
+    border-radius: 40px;
+    border: 2px solid #FFD700;
+    position: relative;
+    box-shadow: inset 0 0 10px #7a0000, 0 0 20px #ff0000;
+    margin-top: 50px;
+}
+
+.lantern::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-left: 1px solid rgba(255, 215, 0, 0.4);
+    border-right: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 50%;
+}
+
+.lantern::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background: #FFD700;
+}
+
+.lantern-cap {
+    position: absolute;
+    width: 45px;
+    height: 12px;
+    background: #FFD700;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.lantern-cap.top {
+    top: -5px;
+}
+
+.lantern-cap.bottom {
+    bottom: -5px;
+}
+
+.tassel {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 40px;
+    background: repeating-linear-gradient(to right, #FFD700, #FFD700 1px, transparent 1px, transparent 3px);
+    border-radius: 0 0 5px 5px;
+}
+
+.tassel::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #FFD700;
+    border-radius: 50%;
+}
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 215, 0, 0.1);
+    z-index: 1;
+}
+
+.c1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+}
+
+.c2 {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    right: -150px;
+}
+
+@media (max-width: 600px) {
+    .gong-xi {
+        font-size: 2.5rem;
+    }
+
+    .message {
+        font-size: 1.2rem;
+    }
+
+    .chinese-char {
+        font-size: 3.5rem;
+    }
+
+    .lantern-container.left {
+        left: 5%;
+    }
+
+    .lantern-container.right {
+        right: 5%;
+    }
+
+    .lantern {
+        width: 60px;
+        height: 80px;
+    }
+
+    .lantern-cap {
+        width: 35px;
+    }
+}
