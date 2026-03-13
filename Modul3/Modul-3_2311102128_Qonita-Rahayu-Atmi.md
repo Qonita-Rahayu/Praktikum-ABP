@@ -38,13 +38,13 @@
 
 **2. Font Properties**adalah elemen yang sanagt penting dalam setiap halaman web. Oleh karena itu, pemilihan gaya tipografi yang tepat sangat menentukan kualitas visual serta kenyamanan pengguna saat membaca konten. Untuk mencapai tampilan yang estetis dan fungsional, CSS menyediakan berbagai Font Properties yang memungkinkan pengembang mengatur karakter teks secara mendetail.
 
-**3. List Properties** adalah elemen yang berguna membuat sebuah list menggunakan simbol dan karakter. Tag yang digunakan adalah tag <ul></ul> atau <ol></ol>. Tag <ul> digunakan ketika akan menggunakan list dengan penanda berupa simbol atau bisa dikatakan unordered list, sedangkan tag <ol> digunakan ketika akan menggunakan list dengan penanda karakter yang memiliki urutan atau bisa dikatakan ordered list.
+**3. List Properties** adalah elemen yang berguna membuat sebuah list menggunakan simbol dan karakter. Tag yang digunakan adalah tag `<ul></ul>` atau `<ol></ol>`. Tag `<ul>` digunakan ketika akan menggunakan list dengan penanda berupa simbol atau bisa dikatakan unordered list, sedangkan tag `<ol>` digunakan ketika akan menggunakan list dengan penanda karakter yang memiliki urutan atau bisa dikatakan ordered list.
 
 **4. Alignment of Text** adalah properti CSS yang berfungsi untuk mengatur posisi horizontal teks di dalam sebuah elemen atau wadah (container). Dalam desain web, pengaturan perataan ini sangat penting untuk menciptakan keseimbangan visual, memudahkan pengguna dalam membaca konten, serta mempertegas struktur informasi pada halaman.
 
 **5. Colors** merupakan penting dalam web, namun pengaturan color teks dan latar belakang bisa dilakukan langsung menggunakan atribut di dalam tag HTML, hasil yang lebih maksimal dapat dicapai melalui CSS. Hal ini dikarenakan CSS menyediakan fitur pengaturan yang lebih mendalam dan fleksibel, sehingga memberikan keleluasaan lebih bagi desainer untuk menciptakan komposisi warna yang lebih baik dan terstruktur.
 
-**6. Span & Div** Span merupakan elemen HTML yang dapat menangani perubahan konten elemen pada satu baris. Tag yang digunakan adalah <span></span>. Sedangkan Div merupakan elemen HTML yang digunakan untuk membuat section untuk beberapa elemen HTML di dalamnya. Tag yang digunakan yaitu <div></div>.
+**6. Span & Div** Span merupakan elemen HTML yang dapat menangani perubahan konten elemen pada satu baris. Tag yang digunakan adalah `<span></span>`. Sedangkan Div merupakan elemen HTML yang digunakan untuk membuat section untuk beberapa elemen HTML di dalamnya. Tag yang digunakan yaitu `<div></div>`.
 
 ---
 
