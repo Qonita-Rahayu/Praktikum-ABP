@@ -307,21 +307,21 @@ function tutupTHR(e) {
 ![ss Unguided](assets/02.png)
 
 - **Penjelasan HTML**:
-  - Pada baris 8-9, tag <link> digunakan untuk menghubungkan file CSS eksternal dari CDN (Content Delivery Network), yaitu Bootstrap 5 untuk sistem tata letak dan Bootstrap Icons untuk menampilkan ikon seperti bintang dan bulan.
+  - Pada baris 8-9, tag `<link>` digunakan untuk menghubungkan file CSS eksternal dari CDN (Content Delivery Network), yaitu Bootstrap 5 untuk sistem tata letak dan Bootstrap Icons untuk menampilkan ikon seperti bintang dan bulan.
 
-  - Pada baris 10, tag <link> digunakan untuk memanggil Google Fonts (Playfair Display dan Poppins) guna memberikan tampilan tipografi yang estetis dan modern.
+  - Pada baris 10, tag `<link>` digunakan untuk memanggil Google Fonts (Playfair Display dan Poppins) guna memberikan tampilan tipografi yang estetis dan modern.
 
-  - Pada baris 12, tag <link> menghubungkan file style.css lokal yang berisi pengaturan gaya khusus, termasuk animasi dan efek glassmorphism.
+  - Pada baris 12, tag `<link>` menghubungkan file style.css lokal yang berisi pengaturan gaya khusus, termasuk animasi dan efek glassmorphism.
 
-  - Pada baris 17-21, elemen <div> dengan kelas d-flex digunakan sebagai pembungkus ikon dekoratif. Di dalamnya terdapat tag <i> yang menampilkan ikon bintang dan bulan dengan kelas animasi floating-star.
+  - Pada baris 17-21, elemen `<div>` dengan kelas d-flex digunakan sebagai pembungkus ikon dekoratif. Di dalamnya terdapat tag <i> yang menampilkan ikon bintang dan bulan dengan kelas animasi floating-star.
 
-  - Pada baris 33-39, elemen <div> dengan kelas glass-panel berfungsi sebagai wadah untuk menampilkan kutipan hadits dengan gaya visual panel transparan yang elegan.
+  - Pada baris 33-39, elemen `<div>` dengan kelas glass-panel berfungsi sebagai wadah untuk menampilkan kutipan hadits dengan gaya visual panel transparan yang elegan.
 
-  - Pada baris 48-50, elemen <button> dengan atribut onclick="bukaTHR()" digunakan untuk membuat tombol interaktif yang, saat diklik, akan menjalankan fungsi JavaScript untuk menampilkan pesan hadiah.
+  - Pada baris 48-50, elemen `<button>` dengan atribut onclick="bukaTHR()" digunakan untuk membuat tombol interaktif yang, saat diklik, akan menjalankan fungsi JavaScript untuk menampilkan pesan hadiah.
 
-  - Pada baris 54-73, elemen <div> dengan id="thrModal" digunakan untuk membuat struktur Modal (Pop-up). Elemen ini memiliki kelas modal-overlay yang secara default diatur agar tersembunyi dan hanya muncul saat tombol THR ditekan.
+  - Pada baris 54-73, elemen `<div>` dengan id="thrModal" digunakan untuk membuat struktur Modal (Pop-up). Elemen ini memiliki kelas modal-overlay yang secara default diatur agar tersembunyi dan hanya muncul saat tombol THR ditekan.
 
-  - Pada baris 76-78, tag <script> digunakan untuk menyisipkan logika program. Baris 76 memanggil library JavaScript dari Bootstrap, sementara baris 78 memanggil file lokal script.js untuk menangani interaksi klik pada halaman.
+  - Pada baris 76-78, tag `<script>` digunakan untuk menyisipkan logika program. Baris 76 memanggil library JavaScript dari Bootstrap, sementara baris 78 memanggil file lokal script.js untuk menangani interaksi klik pada halaman.
 
 - **Penjelasan CSS**:
   - Pada baris 1-4, terdapat penggunaan CSS Variables (:root) untuk menyimpan kode warna emas (--ramadan-gold). Ini memudahkan pengelolaan warna agar konsisten di seluruh elemen.
