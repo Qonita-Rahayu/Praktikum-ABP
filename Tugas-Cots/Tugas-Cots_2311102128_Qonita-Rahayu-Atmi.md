@@ -32,7 +32,16 @@
 
 ---
 
-# A. SOAL
+# A. DASAR TEORI
+**HTML** (HyperText Markup Language) merupakan fondasi utama dalam pengembangan web yang berfungsi untuk menyusun struktur dan kerangka dasar sebuah situs.HTML bertanggung jawab mengelola elemen-elemen esensial seperti teks, gambar, dan tautan sehingga peramban (browser) dapat menampilkan konten tersebut secara terorganisir kepada pengguna.
+
+**CSS (Cascading Style Sheets)** adalah bahasa yang dirancang khusus untuk mengatur estetika visual dari halaman web yang telah disusun menggunakan HTML. Jika HTML berfungsi sebagai kerangka bangunan, maka CSS berperan sebagai desain interior yang menentukan bagaimana elemen-elemen tersebut dipresentasikan di layar peramban (browser), mulai dari tata letak, warna, hingga tipografi.
+
+**Bootstrap** merupakan kerangka kerja (framework) front-end gratis yang dirancang untuk mempercepat dan mempermudah pengembangan antarmuka web. Proyek ini diinisiasi oleh Mark Otto dan Jacob Thornton di Twitter, lalu diluncurkan sebagai produk sumber terbuka (open source) di GitHub pada Agustus 2011. Bootstrap menyediakan berbagai desain berbasis HTML dan CSS yang mencakup elemen tipografi, formulir, tombol, navigasi, hingga fitur interaktif seperti carousel gambar dan plugin JavaScript opsional. Keunggulan utamanya terletak pada fitur desain responsif, yang memungkinkan tampilan web beradaptasi secara otomatis untuk memberikan pengalaman pengguna yang optimal di berbagai perangkat, mulai dari ponsel hingga desktop.
+
+**DataTables** adalah pustaka JavaScript yang fleksibel dan tangguh untuk menambahkan kontrol interaksi tingkat lanjut ke tabel HTML mana pun. Fokus utamanya adalah memberikan kemudahan bagi pengguna akhir (user) untuk mengolah data tanpa harus terus-menerus memuat ulang halaman (refresh).
+
+# B. SOAL
 
 Buatlah sebuah halaman web sederhana untuk menampilkan data produk. Pada halaman tersebut terdapat form input dan tabel data produk.
 Ketentuan:
@@ -55,7 +64,7 @@ Output:
 
 ---
 
-# B. PENGERJAAN
+# C. PENGERJAAN
 
 ## - Penggunaan Bootstrap untuk Halaman
 
@@ -288,7 +297,7 @@ if (index !== -1) {
 
 ![ss Unguided](assets/12.png)
 
-# C. KODE
+# D. KODE
 
 ### Kode HTML (`index.html`)
 
@@ -1158,9 +1167,15 @@ $(document).ready(function() {
   - Pada baris 142-175, untuk aksi ketika tombol "Hapus" ditekan. Karena tombol hapus dibuat secara dinamis,menggunakan Event Delegation pada tbody. Ketika diklik, akan memicu pop-up konfirmasi SweetAlert2. Jika pengguna mengonfirmasi ("Ya, hapus!"), data tersebut disaring (filter) agar keluar dari array, lalu tabel disinkronkan kembali.
   - Pada baris 177-189, untuk aksi ketika tombol "Edit" ditekan pada tabel, mencari data produk yang spesifik berdasarkan ID-nya, lalu secara otomatis mengisi nilai (value) di setiap kolom input di dalam Modal Edit sebelum akhirnya memunculkan tampilan Modal tersebut ke layar menggunakan API Bootstrap.
 
-# D. SS FULL
+# E. SS FULL
 
 ![ss Unguided](assets/13.png)
 
-# E. KESIMPULAN
+# F. KESIMPULAN
 - Praktikum pada tugas cots ini membuat framework Bootstrap 5, library jQuery, dan plugin DataTables untuk menciptakan sistem manajemen produk yang fungsional . Bootstrap berperan sentral dalam membangun struktur layout yang responsif melalui sistem grid seperti kartu (cards) serta modal. Sementara itu, jQuery digunakan untuk menangani logika interaksi DOM dan manipulasi data pada sisi klien, termasuk pengelolaan penyimpanan lokal menggunakan LocalStorage agar data bersifat persisten. Implementasi fitur CRUD (Create, Read, Update, Delete) yang dipadukan dengan DataTables memberikan pengalaman pengguna yang baik, di mana fitur pencarian, filter, dan paginasi tersedia secara otomatis. Penggunaan library tambahan seperti SweetAlert2 untuk notifikasi dan konfirmasi penghapusan menambah aspek keamanan dan profesionalitas pada antarmuka. Melalui penugasan ini, pemahaman mengenai manajemen data berbasis objek (mapping object) dan sinkronisasi antara state data JavaScript dengan tampilan tabel telah diterapkan secara komprehensif.
+
+# G. REFERENSI
+- [Materi Modul 2](https://drive.google.com/file/d/1Gcsi-U4rzqU0GC6dYTlzO7KUthrGoL8q/view?usp=sharing)
+- [Materi Modul 3](https://drive.google.com/file/d/1kd7ogQkR_rsNCnKDcJDmavY8FiOyTLzs/view?usp=sharing)
+- [Materi Modul 4](https://drive.google.com/file/d/1TW5Y0AdzkVk24ThPUf1OQNs2Mnw3XNO5/view?usp=sharing)
+- [E. B. P. Manurung dan H. Simangunsong, "Penerapan Aplikasi Kasir Berbasis Android pada Toko Aneka Snack dan Cemilan UD. Ibu Ida Medan," CTIS, vol. 6, no. 2, hlm. 36-42, November 2022](https://www.jurnal.stikommedan.ac.id/index.php/ctis/article/view/70/50)
