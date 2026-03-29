@@ -56,7 +56,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
 
 **1. Aplikasi harus menggunakan Framework Bootstrap sebagai styling.**
    - **Penjelasan**: Aplikasi inventori menggunakan **Bootstrap 5** sebagai framework *styling* utama. Bootstrap digunakan secara dominan untuk: (1) **Sistem grid responsif**, (2) **Utility classes**, (3) **Komponen `badge`**, (4) **Komponen `modal`**, (5) **Tombol**, (6) **Bootstrap Icons**.
-   - **Kode Penerapan Bootstrap (Contoh kombinasi grid + badge + modal pada `produk.html`)**:
+   - **Kode Penerapan Bootstrap (Contoh pada `produk.html`)**:
      ```html
      <!-- Grid responsif Bootstrap -->
      <div class="row g-3 mb-4" id="statsRow">
@@ -109,7 +109,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
 
    **3.1 Halaman Dashboard (`index.html`)**
    - **Penjelasan**: Halaman utama yang menjadi pusat informasi inventori. Menampilkan **4 kartu statistik** (Total Produk, Total Unit Stok, Stok Habis, dan Nilai Inventori), **grafik distribusi kategori** berupa *progress bar* visual, **panel peringatan stok** (produk dengan stok ≤ 15), serta **grid kartu produk terbaru**. Semua data diambil secara dinamis dari endpoint `/api/produk` menggunakan jQuery AJAX satu kali saat halaman dimuat, lalu diolah di sisi klien.
-   - **Kode Implementasi (`index.html`)** – Bagian Statistik & Grafik Kategori:
+   - **Kode Implementasi (`index.html`)** Bagian Statistik & Grafik Kategori:
      ```html
      <!-- Kartu Statistik (Read: Menampilkan ringkasan data) -->
      <div class="row g-3 mb-4" id="statsRow">
@@ -156,7 +156,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
        </div>
      </div>
      ```
-   - **Kode JavaScript (`index.html`)** – Pengolahan data statistik dan grafik:
+   - **Kode JavaScript (`index.html`)** Pengolahan data statistik dan grafik:
      ```javascript
      $(document).ready(function() {
        $.ajax({
@@ -196,7 +196,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
 
    **3.2 Halaman Tabel / Tampil Data (`produk.html`)**
    - **Penjelasan**: Halaman ini merupakan pusat manajemen data produk. Menampilkan **seluruh data produk dalam tabel** yang dilengkapi dengan fitur filter (berdasarkan kategori, merk, dan status stok), pencarian, serta paginasi oleh plugin jQuery DataTables. Setiap baris tabel memiliki **kolom Aksi** berisi tombol Edit (Update) dan Hapus (Delete) yang merupakan implementasi nyata dari operasi CRUD.
-   - **Kode HTML (`produk.html`)** – Struktur Tabel dan Filter Bar:
+   - **Kode HTML (`produk.html`)** Struktur Tabel dan Filter Bar:
      ```html
      <!-- Filter Bar -->
      <div class="card mb-3">
@@ -238,7 +238,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
        </div>
      </div>
      ```
-   - **Kode JavaScript (`produk.html`)** – Render Baris Tabel dan Load Data:
+   - **Kode JavaScript (`produk.html`)** Baris Tabel dan Load Data:
      ```javascript
      // Fungsi merender setiap baris tabel (termasuk tombol aksi CRUD)
      function renderRow(p, idx) {
@@ -287,7 +287,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
 
    **3.3 Halaman Form Tambah / Edit (`form.html`)**
    - **Penjelasan**: Halaman ini bersifat **dual-purpose**: digunakan untuk **menambah produk baru** (Create) maupun **mengedit produk yang sudah ada** (Update). Mode ditentukan secara otomatis berdasarkan ada-tidaknya parameter `?id=` di URL. Jika ada `id`, sistem mengisi form dengan data existing menggunakan AJAX GET, mengubah label tombol menjadi *"Update Produk"*, dan mengirim request `PUT` saat form disubmit. Jika tidak ada `id`, form kosong dan mengirim request `POST`. Terdapat pula **preview harga dan stok real-time** serta **validasi input** menggunakan jQuery Validate. Field yang tersedia: Kode Produk, Nama, Merk, Kategori, Harga, Stok, Satuan, dan Tanggal Masuk.
-   - **Kode HTML (`form.html`)** – Struktur Form Input Data Produk:
+   - **Kode HTML (`form.html`)** Struktur Form Input Data Produk:
      ```html
      <form id="formProduk" novalidate>
        <input type="hidden" id="produkId">
@@ -355,7 +355,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
        </div>
      </form>
      ```
-   - **Kode JavaScript (`form.html`)** – Logika Dual-Mode (Tambah/Edit) dan Submit AJAX:
+   - **Kode JavaScript (`form.html`)** (Tambah/Edit) dan Submit AJAX:
      ```javascript
      var isEdit = false;
      var editId = getParam('id'); // Ambil parameter ?id= dari URL
@@ -442,29 +442,29 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
      app.use(express.static('public'));
      app.use(bodyParser.json());
 
-     let produkList = []; // Penyimpanan data sementara di memori
+     let produkList = []; 
      let nextId = 1;
 
-     // READ ALL – Tampilkan semua produk
+     // READ ALL Tampilkan semua produk
      app.get('/api/produk', (req, res) => {
        res.json({ data: produkList });
      });
 
-     // READ ONE – Tampilkan detail satu produk berdasarkan ID
+     // READ ONE Tampilkan detail satu produk berdasarkan ID
      app.get('/api/produk/:id', (req, res) => {
        const p = produkList.find(x => x.id == req.params.id);
        if (!p) return res.status(404).json({ error: 'Produk tidak ditemukan' });
        res.json(p);
      });
 
-     // CREATE – Tambah produk baru
+     // CREATE Tambah produk baru
      app.post('/api/produk', (req, res) => {
        const p = { id: nextId++, ...req.body };
        produkList.push(p);
        res.json({ message: 'Produk berhasil ditambahkan', data: p });
      });
 
-     // UPDATE – Perbarui data produk berdasarkan ID
+     // UPDATE Perbarui data produk berdasarkan ID
      app.put('/api/produk/:id', (req, res) => {
        const idx = produkList.findIndex(x => x.id == req.params.id);
        if (idx === -1) return res.status(404).json({ error: 'Produk tidak ditemukan' });
@@ -472,7 +472,7 @@ Buatlah sebuah aplikasi web sederhana yang memiliki minimal 3 (tiga) halaman fun
        res.json({ message: 'Produk berhasil diperbarui', data: produkList[idx] });
      });
 
-     // DELETE – Hapus produk berdasarkan ID
+     // DELETE Hapus produk berdasarkan ID
      app.delete('/api/produk/:id', (req, res) => {
        const idx = produkList.findIndex(x => x.id == req.params.id);
        if (idx === -1) return res.status(404).json({ error: 'Produk tidak ditemukan' });
