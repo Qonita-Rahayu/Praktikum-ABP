@@ -478,7 +478,7 @@ Data produk pada halaman ini disajikan menggunakan jQuery DataTables sehingga ta
 
 ---
 
-**3. Halaman Form Tambah Produk***
+**3. Halaman Form Tambah Produk**
 
 ![ss Form Tambah Produk](assets/03.png)
 
@@ -486,7 +486,7 @@ Form input untuk menyimpan data ke database MySQL. Setiap field disusun secara j
 
 ---
 
-**4. Halaman Read Produk***
+**4. Halaman Read Produk**
 
 ![ss Form Read Produk](assets/04.png)
 
@@ -494,7 +494,7 @@ Halaman read produk menampilkan data yang telah ditambahkan ke dalam tabel produ
 
 ---
 
-**5. Halaman Form Edit Produk***
+**5. Halaman Form Edit Produk**
 
 ![ss Form Edit Produk](assets/05.png)
 ![ss Form Edit Produk](assets/06.png)
@@ -503,7 +503,7 @@ Form Edit memiliki tampilan yang sama dengan form Create, tetapi dilengkapi deng
 
 ---
 
-**6. Halaman Detail Produk***
+**6. Halaman Detail Produk**
 
 ![ss Form Detail Produk](assets/07.png)
 
@@ -511,7 +511,7 @@ Halaman ini menampilkan seluruh data produk secara lengkap, sehingga memudahkan 
 
 ---
 
-**7. Halaman Hapus***
+**7. Halaman Hapus**
 
 ![ss Form Detail Hapus](assets/08.png)
 ![ss Form Detail Hapus](assets/09.png)
@@ -520,7 +520,7 @@ Pada halaman hapus, ketika pengguna menekan tombol hapus, sistem akan menampilka
 
 ---
 
-**8. Halaman Cari***
+**8. Halaman Cari**
 
 ![ss Form Detail Hapus](assets/10.png)
 
@@ -534,4 +534,4 @@ Praktikum pada modul 11, 12, dan 13, sistem **AiCik Stock** berhasil dikembangka
 
 Selain itu, form *create* dan *edit* dilengkapi dengan validasi sehingga data yang disimpan tetap terjaga keakuratannya. Proses penghapusan data juga dibuat lebih aman melalui konfirmasi modal untuk mencegah kesalahan pengguna. Dari sisi database, penggunaan migration, factory, dan seeder membantu dalam membangun struktur data yang rapi serta menyediakan data awal sehingga aplikasi dapat langsung digunakan untuk pengujian.
 
-Sistem juga telah dilengkapi dengan fitur autentikasi berbasis session untuk membatasi akses hanya kepada pengguna yang berwenang. Secara keseluruhan, aplikasi ini sudah memenuhi kebutuhan pengelolaan inventaris toko secara efektif, aman, dan mudah digunakan, serta didukung dengan dokumentasi yang membantu dalam proses pemahaman dan pengembangan lebih lanjut.
+Sistem juga telah dilengkapi dengan fitur autentikasi berbasis session untuk membatasi akses hanya kepada pengguna. Secara keseluruhan, aplikasi ini sudah memenuhi kebutuhan pengelolaan inventaris toko secara efektif, aman, dan mudah digunakan, serta didukung dengan dokumentasi yang membantu dalam proses pemahaman dan pengembangan lebih lanjut.
