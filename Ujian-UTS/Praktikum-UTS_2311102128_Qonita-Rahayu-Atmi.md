@@ -71,7 +71,6 @@ class Project extends Model {
 
 ### 3.2 Route & Action Logic
 ```php
-// web.php - Contoh penanganan Update Profil & Upload Foto
 Route::post('/admin/profile', function (Request $request) {
     $profile = Profile::first() ?? new Profile();
     
@@ -104,7 +103,6 @@ Route::post('/admin/profile', function (Request $request) {
     Sistem login merupakan gerbang utama keamanan aplikasi, menggunakan sistem autentikasi bawaan Laravel. Jika berhasil login, pengguna akan otomatis dialihkan ke halaman **Dashboard (/admin)**. Untuk proses Logout, sistem akan membersihkan session dan mengalihkan pengguna kembali ke **Landing Page (/)** demi keamanan.
 *   **Kode Implementasi:**
 ```php
-// Login Handler dengan validasi dan redirect
 Route::post('/login', function (Request $request) {
     $credentials = $request->validate([
         'email'    => 'required|email',
@@ -117,7 +115,6 @@ Route::post('/login', function (Request $request) {
     return back()->withErrors(['email' => 'Email atau password salah.'])->onlyInput('email');
 });
 
-// Logout Handler dengan redirect ke landing page
 Route::post('/logout', function (Request $request) {
     Auth::logout();
     $request->session()->invalidate();
@@ -162,7 +159,6 @@ Route::post('/logout', function (Request $request) {
     Modul untuk memperbarui data biodata yang tampil di Landing Page. Fitur utama di sini adalah integrasi **Live Preview**, di mana setiap perubahan teks pada form akan segera teramati pada kartu profil di sisi kanan layar secara instan.
 *   **Kode Implementasi:**
 ```javascript
-// Live Preview Interaction Logic
 function initProfilePreview() {
     const inputs = ['name', 'role', 'hero_description'];
     inputs.forEach(field => {
@@ -176,7 +172,6 @@ function initProfilePreview() {
         }
     });
 
-    // Handling AJAX Save Profile
     const form = document.getElementById('profileForm');
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -199,7 +194,7 @@ function initProfilePreview() {
 #### 4.4.1 Tabel Data Skill
 ![Tabel Skills](assets/3.png)
 *   **Penjelasan:** 
-    Menyajikan data skill yang tersimpan dalam database ke dalam bentuk tabel. Admin dapat melihat ikon, nama, dan tingkat kemahiran setiap skill. Tabel didesain dengan perataan yang pas untuk memastikan keterbacaan data yang tinggi.
+    Tabel data skill yang tersimpan dalam database ke dalam bentuk tabel. Admin dapat melihat ikon, nama, dan tingkat setiap skill. 
 *   **Kode Implementasi:**
 ```blade
 @foreach($skills as $i => $s)
@@ -219,10 +214,9 @@ function initProfilePreview() {
 #### 4.4.2 Create Skill (Tambah Data)
 ![Tambah Skills](assets/5.png)
 *   **Penjelasan:** 
-    Proses penambahan skill baru melalui modal popup. Admin menginputkan nama skill, memilih file ikon, dan menggeser slider tingkat kemahiran. Data dikirimkan menggunakan objek `FormData` secara asinkron.
+    Tambah skill baru melalui modal popup. Admin menginputkan nama skill, memilih file ikon, dan menggeser slider tingkat kemahiran. Data dikirimkan menggunakan objek `FormData` secara asinkron.
 *   **Kode Implementasi:**
 ```javascript
-// Function Create Skill via AJAX
 async function storeSkill() {
     const fd = new FormData(document.getElementById('skillForm'));
     try {
@@ -247,9 +241,7 @@ async function storeSkill() {
     Verifikasi data setelah proses penambahan berhasil. Sistem memuat ulang data dari database dan menampilkannya di baris tabel Dashboad, membuktikan bahwa inputan admin telah sukses diproses dan disimpan secara permanen di database MySQL.
 *   **Kode Implementasi:**
 ```javascript
-// Response Handler setelah Create
 if (data.success) {
-    // Memverifikasi data tertulis di tabel dengan me-refresh halaman (Trigger Read Baru)
     console.log('Skill ID Created:', data.skill.id);
     document.getElementById('alert-container').innerHTML = renderSuccessMessage('Skill Created!');
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -260,10 +252,9 @@ if (data.success) {
 #### 4.4.4 Update Skill
 ![Update Skills](assets/7.png)
 *   **Penjelasan:** 
-    Fungsi pengeditan data di mana admin dapat memodifikasi record yang sudah ada. Gambar menunjukkan form edit skill yang sudah terisi data lama dan notifikasi sukses setelah tombol simpan ditekan. Sistem memproses pergantian ikon hanya jika ada file baru yang diunggah.
+    Update data admin dapat mengudate data yang telah ditambahkan. Gambar menunjukkan form edit skill yang sudah terisi data lama dan notifikasi sukses setelah tombol simpan ditekan. Sistem memproses pergantian ikon hanya jika ada file baru yang diunggah.
 *   **Kode Implementasi:**
 ```php
-// Backend logic update skill dengan penanganan file ikon baru
 Route::post('/admin/skills/{id}', function (Request $request, $id) {
     $skill = Skill::findOrFail($id);
     
@@ -286,7 +277,7 @@ Route::post('/admin/skills/{id}', function (Request $request, $id) {
 ![Update Berhasil](assets/8.png)
 ![Read Update](assets/9.png)
 *   **Penjelasan:** 
-    Menampilkan kondisi tabel setelah proses update selesai. Data lama telah tergantikan oleh data baru, memastikan fungsi pembaruan record berjalan dengan sempurna di sisi database. Terlihat pula indikator persentase yang telah berubah sesuai inputan terbaru.
+    Menampilkan kondisi tabel setelah proses update selesai, data lama telah tergantikan oleh data baru.
 *   **Kode Implementasi:**
 ```blade
 <!-- Render Baris Skill yang telah diperbarui -->
@@ -305,10 +296,9 @@ Route::post('/admin/skills/{id}', function (Request $request, $id) {
 ![Hapus Berhasil](assets/11.png)
 ![Table After Delete](assets/12.png)
 *   **Penjelasan:** 
-    Menghapus data keahlian dari sistem secara permanen. Dilindungi dengan modal konfirmasi konfirmasi berwarna merah untuk mencegah penghapusan data secara tidak sengaja oleh administrator sebelum request DELETE dikirimkan ke server.
+    Hapus data skill dari sistem secara permanen dengan muncul modal konfirmasi konfirmasi berwarna merah untuk mencegah penghapusan data secara tidak sengaja oleh administrator sebelum request DELETE dikirimkan ke server.
 *   **Kode Implementasi:**
 ```javascript
-// JavaScript Function untuk menghapus data secara asinkron
 async function requestDelete(id) {
     const confirmation = await showRedModal('Apakah anda yakin ingin menghapus skill ini?');
     if(confirmation) {
@@ -350,10 +340,9 @@ async function requestDelete(id) {
 #### 4.5.2 Create Project (Tambah Proyek)
 ![Tambah Project](assets/14.png)
 *   **Penjelasan:** 
-    Modal untuk menginputkan proyek baru secara asinkron. Admin menginput judul, deskripsi, teknologi, dan mengunggah foto thumbnail proyek yang akan disimpan ke direktori storage publik melalui PHP.
+    Tambah data untuk menginputkan proyek baru secara asinkron. Admin menginput judul, deskripsi, teknologi, dan mengunggah foto thumbnail proyek yang akan disimpan ke direktori storage publik melalui PHP.
 *   **Kode Implementasi:**
 ```javascript
-// AJAX Fetch Store Project
 async function publishProject() {
     const form = document.getElementById('projectForm');
     const fd = new FormData(form);
@@ -400,14 +389,12 @@ async function publishProject() {
 #### 4.5.4 Update Project
 ![Update Project](assets/17.png)
 *   **Penjelasan:** 
-    Memperbarui konten proyek, baik judul, deskripsi, maupun penggantian gambar utama proyek. Menggunakan metode POST dengan penanganan multipart form data untuk memastikan file gambar dapat diunggah dengan benar.
+    Update project data yang telah ditambahkan misalnya judul, deskripsi, maupun penggantian gambar utama proyek. Menggunakan metode POST dengan penanganan multipart form data untuk memastikan file gambar dapat diunggah dengan benar.
 *   **Kode Implementasi:**
 ```php
-// Route Handler Update Project
 Route::post('/admin/projects/{id}', function (Request $request, $id) {
     $project = Project::findOrFail($id);
     
-    // Penanganan upload thumbnail baru opsional
     if($request->hasFile('image_file')) {
         $filename = time() . '.png';
         $request->file('image_file')->move(public_path('assets/img'), $filename);
@@ -428,17 +415,15 @@ Route::post('/admin/projects/{id}', function (Request $request, $id) {
 ![Update Berhasil](assets/18.png)
 ![Read Update Project](assets/19.png)
 *   **Penjelasan:** 
-    Menampilkan detail proyek di tabel setelah dilakukan perubahan data. Hal ini memastikan integritas data tetap terjaga pasca dilakukan pengeditan oleh administrator dan data yang tampil di Landing Page sudah diperbarui.
+    Menampilkan detail proyek di tabel setelah dilakukan perubahan data, integritas data dilakukan pengeditan oleh administrator dan data yang tampil di Landing Page sudah diperbarui.
 *   **Kode Implementasi:**
 ```javascript
-// Callback logic untuk verifikasi Read setelah Update
 async function handleUpdateSuccess(projectId) {
     console.log('Verifying Update for Record: ', projectId);
     const successBar = document.getElementById('success-notif-bar');
     successBar.innerHTML = `<p class="text-white font-bold"><i class="fas fa-check-circle"></i> DATA PROJECT ${projectId} TELAH DIPERBARUI</p>`;
     successBar.classList.remove('hidden');
     
-    // Memberikan delay sebelum refresh untuk menunjukkan feedback visual
     setTimeout(() => {
         location.reload();
     }, 1500);
@@ -450,20 +435,17 @@ async function handleUpdateSuccess(projectId) {
 ![Hapus Berhasil](assets/21.png)
 ![Table After Delete Project](assets/22.png)
 *   **Penjelasan:** 
-    Bagian operasi destruktif yang menghapus record proyek terpilih. Setelah modal konfirmasi dijawab "Hapus", sistem akan mengeksekusi penghapusan di database dan menghapus elemen visual proyek dari dashboard secara real-time.
+    Hapus data lalu muncul modal konfirmasi dijawab "Hapus", sistem akan mengeksekusi penghapusan di database dan menghapus elemen visual proyek dari dashboard secara real-time.
 *   **Kode Implementasi:**
 ```php
-// Delete Action di web.php
 Route::delete('/admin/projects/{id}', function ($id) {
     try {
         $project = Project::findOrFail($id);
         
-        // Hapus file fisik jika diperlukan
         if ($project->image_url && file_exists(public_path($project->image_url))) {
-            // unlink(public_path($project->image_url)); 
         }
         
-        $project->delete(); // Eksklusi dari database MySQL
+        $project->delete(); 
         return response()->json(['success' => true]);
     } catch (\Exception $e) {
         return response()->json(['success' => false, 'message' => $e->getMessage()]);
@@ -481,7 +463,6 @@ Route::delete('/admin/projects/{id}', function ($id) {
     Bagian utama yang memperkenalkan Qonita Rahayu Atmi sebagai UI/UX Designer. Tampilan didesain menggunakan font Poppins yang modern dan warna Cyan cerah untuk menonjolkan nama. Terdapat tombol Download CV yang terhubung langsung ke file PDF profesional untuk memudahkan pengunjung mengunduh Curriculum Vitae.
 *   **Kode Implementasi:**
 ```javascript
-// Injected Script untuk me-render Hero Section secara dinamis
 function renderHero(profile) {
     const heroContainer = document.getElementById('hero-container');
     heroContainer.innerHTML = `
@@ -510,7 +491,6 @@ function renderHero(profile) {
     Bagian ini menyajikan narasi tentang profil diri secara mendalam. Data deskripsi ditarik dari database melalui API secara dinamis menggunakan fungsi `fetch`. Hal ini memungkinkan administrator memperbarui teks "About Me" melalui dashboard tanpa harus menyentuh kode program di file Blade.
 *   **Kode Implementasi:**
 ```javascript
-// Logic Fetch & Render About Me Section
 async function initAboutMe() {
     try {
         const response = await fetch('/api/data');
@@ -558,10 +538,9 @@ async function initAboutMe() {
 ### 5.4 My Skills (Icon Cards)
 ![My Skills grid.](assets/26.png)
 *   **Penjelasan:** 
-    Menampilkan kumpulan ikon teknologi yang dikuasai admin. Data di-render secara dinamis menggunakan perulangan JavaScript berdasarkan data yang tersimpan di tabel `skills`.
+    Menampilkan skill dengan data di-render secara dinamis menggunakan perulangan JavaScript berdasarkan data yang tersimpan di tabel `skills`.
 *   **Kode Implementasi:**
 ```javascript
-// Render Skills dengan Grid System responsif
 function renderSkillsGrid(skills) {
     const container = document.getElementById('skills-container');
     container.innerHTML = skills.map(skill => `
@@ -581,10 +560,9 @@ function renderSkillsGrid(skills) {
 ### 5.5 My Project (Display Grid Content)
 ![My Project grid cards.](assets/27.png)
 *   **Penjelasan:** 
-    Galeri hasil karya nyata pengguna yang disusun dalam sistem *Grid* responsif. Setiap proyek ditampilkan dalam kartu (*Card*) yang mencakup gambar mini, judul, dan tech stack yang digunakan.
+    Project yang disusun dalam sistem *Grid* responsif. Setiap proyek ditampilkan dalam kartu (*Card*) yang mencakup gambar mini, judul, dan tech stack yang digunakan.
 *   **Kode Implementasi:**
 ```javascript
-// AJAX Rendering untuk Project Portfolio Cards
 const buildProjectCards = (projects) => {
     const grid = document.getElementById('projects-grid');
     grid.innerHTML = projects.map(proj => {
@@ -614,12 +592,10 @@ const buildProjectCards = (projects) => {
     Fitur kutipan harian yang mengintegrasikan layanan pihak ketiga, **Advice Slip API**. Mendemonstrasikan kemampuan aplikasi dalam mengolah data eksternal secara asinkron menggunakan Fetch API.
 *   **Kode Implementasi:**
 ```javascript
-// Mengambil kutipan motivasi dari API eksternal
 async function fetchDailyAdvice() {
     const textElement = document.getElementById('advice-text');
     const refreshBtn = document.getElementById('refresh-advice-btn');
     
-    // Set Loading State
     textElement.classList.add('opacity-50');
     refreshBtn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i>';
 
@@ -627,7 +603,6 @@ async function fetchDailyAdvice() {
         const res = await fetch('https://api.adviceslip.com/advice');
         const { slip } = await res.json();
         
-        // Render dengan delay halus agar transisi terlihat
         setTimeout(() => {
             textElement.textContent = `"${slip.advice}"`;
             textElement.classList.remove('opacity-50');
