@@ -2,7 +2,7 @@
   <br />
   <h1>LAPORAN PRAKTIKUM UTS <br>APLIKASI BERBASIS PLATFORM</h1>
   <br />
-  <h3>UJIAN UTS</h3>
+  <h3>UJIAN UTS WEB PROFILE</h3>
   <br />
   <br />
   <img src="assets/logo.jpeg" alt="Logo" width="300">
