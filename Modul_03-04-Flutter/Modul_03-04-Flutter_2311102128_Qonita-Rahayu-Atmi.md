@@ -223,7 +223,7 @@ Penggunaan widget `Stack` membuat antarmuka aplikasi dengan penempatan visual be
 
 # E. Kesimpulan
 
-Praktikum Modul 4 ini membuat antarmuka (UI) di Flutter bergantung pada kombinasi widget struktural yang tepat. Penggunaan **Container** dan **Stack** dapat memodifikasi desain kotak serta menyusun elemen visual secara bertumpuk. Sementara itu, varian widget **GridView** dan **ListView** (termasuk *builder* dan *separated*) sangat penting dan efisien untuk menyusun daftar data berulang baik secara vertikal maupun berwujud jaring (grid) sehingga menghasilkan tampilan aplikasi yang dinamis, responsif, dan hemat memori.
+Praktikum Modul 4 ini membuat antarmuka (UI) di Flutter. Penggunaan **Container** dan **Stack** dapat memodifikasi desain kotak serta menyusun elemen visual secara bertumpuk. Sementara itu, varian widget **GridView** dan **ListView** (termasuk *builder* dan *separated*) sangat penting dan efisien untuk menyusun daftar data berulang baik secara vertikal maupun berbentuk grid sehingga menghasilkan tampilan aplikasi yang dinamis, responsif.
 
 ---
 
