@@ -58,7 +58,7 @@ Buat 1 project Flutter yang menampilkan beberapa widget UI berikut:
 - **Stack** → tampilan bertumpuk (kotak / text)
 ---
 
-# C. Kode Program dan Penjelasan Tiap Widget
+# C. Kode Program
 
 ### 1. Container (Kotak Berwarna)
 
