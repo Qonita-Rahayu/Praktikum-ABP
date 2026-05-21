@@ -2,7 +2,7 @@
   <br />
   <h1>LAPORAN PRAKTIKUM <br>APLIKASI BERBASIS PLATFORM</h1>
   <br />
-  <h3>MODUL 7 <br> STATEFULWIDGET, STATELESSWIDGET & NAVIGATION</h3>
+  <h3>MODUL 7 <br> DATA MAHASISWA (NAVIGATOR & FORM) </h3>
   <br />
   <br />
   <img src="assets/logo.jpeg" alt="Logo" width="300" onerror="this.style.display='none'">
@@ -1542,6 +1542,7 @@ class DeveloperProfileScreen extends StatelessWidget {
 ### 2. Halaman Formulir Input (Form Mahasiswa)
 
 ![Hasil Program - Tampilan Form Input](assets/2.png)
+
 ![Hasil Program - Tampilan Form Input](assets/3.png)
 ---
 
